@@ -2,6 +2,11 @@
 
 [SS13 VOX](https://github.com/N3X15/ss13-vox) with polish voices.
 
+Demo:
+
+* https://raw.githubusercontent.com/ScrewdriverSurvivor/ss13-vox-pl/master/demo-pl.ogg
+* https://vocaroo.com/1a118XtBctib
+
 # Jak tego używać?
 
 ## Windows

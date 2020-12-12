@@ -12,6 +12,7 @@
 /*.lab
 /*.mp3
 /*.ogg
+!/demo-pl.ogg
 /*.wav
 /cache
 /cachesfx.*
