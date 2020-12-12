@@ -40,10 +40,10 @@ Teraz nastąpi ręczne pobranie i instalacja polskich głosów. TODO do zautomat
 cd /tmp
 wget http://www.syntezamowy.pjwstk.edu.pl/korpusowa/pjwstk_ks_multisyn_mbrola.tar.bz2
 tar -xf pjwstk_ks_multisyn_mbrola.tar.bz2
-sudo cp -r lib/voices/polish /usr/share/festival/voices
 
 # Instalacja mbrola
 sudo apt install mbrola mbrola-pl1
+sudo cp -r lib/voices/polish /usr/share/festival/voices
 sudo cp /tmp/lib/etc/unknown_DebianGNULinux/mbrola /usr/lib/festival/mbrola
 
 # Instalacja multisyna
@@ -61,7 +61,7 @@ cd ~/ss13-vox-pl
 ./generate.sh
 ```
 
-# ORIGINALNY README
+# Pierwotny README.md
 
 TTS-based announcer inspired by Half Life's announcement system.
 
