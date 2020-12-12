@@ -4,7 +4,7 @@
 
 Demo:
 
-* https://raw.githubusercontent.com/ScrewdriverSurvivor/ss13-vox-pl/master/demo-pl.ogg
+* https://media.githubusercontent.com/media/ScrewdriverSurvivor/ss13-vox-pl/master/demo-pl.ogg
 * https://vocaroo.com/1a118XtBctib
 
 # Jak tego używać?
