@@ -30,7 +30,7 @@ REQUIRED_PACKAGES = [
 	'ffmpeg',
 
 	# It's 2019
-	'python3.6'
+	'python3'
 ]
 
 NITECH_VOICES = [
