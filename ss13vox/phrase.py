@@ -8,7 +8,7 @@ __ALL__ = ['EPhraseFlags', 'Phrase', 'ParsePhraseListFrom']
 # https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
 WINDOZE_RESERVED = re.compile(r'^(CON|PRN|AUX|NUL|COM)[0-9]?$', re.IGNORECASE)
 
-ACCEPTABLE_FILECHARS = string.ascii_letters + string.digits + '_,.'
+ACCEPTABLE_FILECHARS = string.ascii_letters + string.digits + '_,.' + 'ąćęłńóśźż'
 REPL_FILECHAR = '_'
 
 S_TO_DS = 10

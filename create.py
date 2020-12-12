@@ -182,7 +182,7 @@ def GenerateForWord(phrase: Phrase, voice: Voice, writtenfiles: set, args: Optio
         if phrase.hasFlag(EPhraseFlags.SING):
             text2wave += ['-mode', 'singing', phrase.phrase]
         else:
-            with open(phrasefile, 'w') as wf:
+            with open(phrasefile, 'w', encoding = 'iso8859_2') as wf:
                 wf.write(phrase.phrase)
             text2wave += [phrasefile]
         #doubled words, what's up with that? ~screw
