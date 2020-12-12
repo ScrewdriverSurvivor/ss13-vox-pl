@@ -12,7 +12,8 @@ class Pronunciation(object):
     '''
 
     #: Convert convert our CMU standard phonemes to whatever the voice we're using needs.
-    PHONE_CONVERSIONS: Dict[str, Dict[str, str]] = {
+    PHONE_CONVERSIONS: Dict[str, Dict[str, str]] = {}
+    PHONE_CONVERSIONS_EN: Dict[str, Dict[str, str]] = {
         'mrpa': {
             'ae': 'a',
             'ih': 'i',
@@ -20,7 +21,8 @@ class Pronunciation(object):
     }
 
     #: DMU phonemes + pau
-    VALID_PHONEMES: List[str] = [
+    VALID_PHONEMES: List[str] = []
+    VALID_PHONEMES_EN: List[str] = [
         'aa',
         'ae',
         'ah',
