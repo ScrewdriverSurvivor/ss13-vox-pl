@@ -185,7 +185,9 @@ def GenerateForWord(phrase: Phrase, voice: Voice, writtenfiles: set, args: Optio
             with open(phrasefile, 'w') as wf:
                 wf.write(phrase.phrase)
             text2wave += [phrasefile]
-        text2wave += ['tmp/VOX-word.txt', '-o', 'tmp/VOX-word.wav']
+        #doubled words, what's up with that? ~screw
+        #text2wave += ['tmp/VOX-word.txt', '-o', 'tmp/VOX-word.wav']
+        text2wave += ['-o', 'tmp/VOX-word.wav']
     with open(checkfile, 'w') as wf:
         wf.write(md5)
     for fn in ('tmp/VOX-word.wav', 'tmp/VOX-soxpre-word.wav', 'tmp/VOX-sox-word.wav', 'tmp/VOX-encoded.ogg'):
