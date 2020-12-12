@@ -1,4 +1,67 @@
-# SS13 VOX
+# SS13 VOX PL
+
+[SS13 VOX](https://github.com/N3X15/ss13-vox) with polish voices.
+
+# Jak tego używać?
+
+## Windows
+
+Jeśli chcemy używać narzędzia na Windows, musimy zainstalować WSL2. Nie będę na razie opisywał jak to zrobić, jest mnóstwo poradników w sieci na ten temat. Po instalacji WSL2 należy zainstalować i uruchomić Ubuntu. Tam wybieramy sobie dowolną nazwę użytkownika i hasło dla konta (i administratora), wówczas można przejść do kolejnej sekcji.
+
+W razie potrzeby dostęp do dysku Ubuntu jest w windowsie dostępny pod udziałem sieciowym `\\wsl$\Ubuntu`.
+
+## Linux
+
+```sh
+# najpierw aktualizujemy system
+sudo apt update
+sudo apt upgrade
+
+# dodajemy to do path
+export PATH=\"${HOME}/.local/bin:$PATH
+echo "export PATH=\"${HOME}/.local/bin:\$PATH\"" >>"${HOME}"/.bashrc
+
+# instalujemy potrzebne narzędzia
+sudo apt install python3 python3-pip git
+
+# ściągamy konfigurujemy voxa
+git clone https://github.com/ScrewdriverSurvivor/ss13-vox-pl.git
+cd ss13-vox
+pip3 install buildtools
+pip3 install -r requirements.txt
+
+# odpalamy setup zależności
+sudo python3 setup.py
+```
+
+Teraz nastąpi ręczne pobranie i instalacja polskich głosów. TODO do zautomatyzowania później
+
+```sh
+cd /tmp
+wget http://www.syntezamowy.pjwstk.edu.pl/korpusowa/pjwstk_ks_multisyn_mbrola.tar.bz2
+tar -xf pjwstk_ks_multisyn_mbrola.tar.bz2
+sudo cp -r lib/voices/polish /usr/share/festival/voices
+
+# Instalacja mbrola
+sudo apt install mbrola mbrola-pl1
+sudo cp /tmp/lib/etc/unknown_DebianGNULinux/mbrola /usr/lib/festival/mbrola
+
+# Instalacja multisyna
+sudo cp -r /tmp/lib/voices-multisyn/polish /usr/share/festival/voices
+
+# hack na przestarzałe dowiązanie polskiego multisyna
+sudo ln -s /usr/share/festival/multisyn/multisyn.scm /usr/share/festival/multisyn.scm
+sudo ln -s /usr/share/festival/multisyn/multisyn_pauses.scm /usr/share/festival/multisyn_pauses.scm
+sudo ln -s /usr/share/festival/multisyn/target_cost.scm /usr/share/festival/target_cost.scm
+```
+
+Teraz można generować głosy, wynik pojawi się w katalogu `dist`.
+```
+cd ~/ss13-vox-pl
+./generate.sh
+```
+
+# ORIGINALNY README
 
 TTS-based announcer inspired by Half Life's announcement system.
 

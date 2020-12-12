@@ -213,3 +213,27 @@ class SFXVoice(Voice):
         # Just echos and DRC
         return super().genSoxArgs(args)
 #VoiceRegistry.Register(NullVoice)
+
+class PLMbrolaFemale(Voice):
+    ID = 'pl-mbrola'
+    SEX = EVoiceSex.FEMININE
+    FESTIVAL_VOICE_ID = 'pjwstk_pl_ks_mbrola'
+    def genSoxArgs(self, args) -> List[str]:
+        sox_args = [
+            # Starts the gravelly sound, lowers pitch a bit.
+            'stretch', '1.1',
+        ]
+        return sox_args + super().genSoxArgs(args)
+VoiceRegistry.Register(PLMbrolaFemale)
+
+class PLMultisynMale(Voice):
+    ID = 'pl-multisyn'
+    SEX = EVoiceSex.MASCULINE
+    FESTIVAL_VOICE_ID = 'pjwstk_pl_ks_multisyn'
+    def genSoxArgs(self, args) -> List[str]:
+        sox_args = [
+            # Starts the gravelly sound, lowers pitch a bit.
+            'stretch', '1.1',
+        ]
+        return sox_args + super().genSoxArgs(args)
+VoiceRegistry.Register(PLMultisynMale)

@@ -1,36 +1,37 @@
-codebase: vg
+codebase: tg
 # ALL AVAILABLE VOICES (so far)
 # 'us-clb' - US Female (Nitech ARCTIC)
 # 'us-slt' - US Female (Nitech ARCTIC; Midwestern)
 # 'us-rms' - US Male (Nitech ARCTIC)
 voices:
   # Feminine voiceset
-  fem:     us-clb
+  fem:     pl-mbrola
   # Masculine voiceset
-  mas:     us-rms
+  mas:     pl-multisyn
   # Non-AI announcements (like vox_login, etc)
   default: us-clb # Current /vg/ default
   #default: scot-awb # Scottish voice, absolutely fucking hilarious
 #Plug in your own wordlists here.
 phrasefiles:
+  - wordlists/aq/testowy.txt
   # /vg/-specific announcements
-  - wordlists/vg/announcements.txt
+  #- wordlists/vg/announcements.txt
   # /vg/-specific antags
-  - wordlists/vg/antags.txt
+  #- wordlists/vg/antags.txt
   # /vg/-specific chemistry
-  - wordlists/vg/chemistry.txt
+  #- wordlists/vg/chemistry.txt
   # /vg/-specific mining
-  - wordlists/vg/mining.txt
+  #- wordlists/vg/mining.txt
   # /vg/-specific miscellaneous shit
-  - wordlists/vg/misc.txt
+  #- wordlists/vg/misc.txt
   # /vg/-specific songs
-  - wordlists/vg/songs.txt
+  #- wordlists/vg/songs.txt
   # Common wordlists for all stations
-  - wordlists/common.txt
+  #- wordlists/common.txt
   # Censored announcements for "clean" stations.
   #- wordlists/common-clean.txt
   # Common profanity for all stations.
-  - wordlists/profanity.txt
+  #- wordlists/profanity.txt
 # Here, we can override the autodetected defaults for each phrase.
 overrides:
   # Silence for 0.5s (see resynth_sounds.sh)
